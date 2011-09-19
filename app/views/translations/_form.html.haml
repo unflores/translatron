@@ -5,9 +5,15 @@
       %ul
         - @translation.errors.full_messages.each do |msg|
           %li= msg
-
   .field
-    = f.label :value
-    = f.text_field :value
+    = f.label       :value
+    = f.text_field  :value
+  = f.fields_for :translation_key do |key|
+    .field
+      = key.label       :scope
+      = key.text_field  :scope
+    .field
+      = key.label       :tkey
+      = key.text_field  :tkey
   .actions
     = f.submit 'Save'

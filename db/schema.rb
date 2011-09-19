@@ -11,12 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110919112111) do
+ActiveRecord::Schema.define(:version => 20110919130407) do
 
   create_table "locales", :force => true do |t|
     t.string   "code"
     t.string   "name"
     t.boolean  "master"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "translation_keys", :force => true do |t|
+    t.string   "scope"
+    t.string   "tkey"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

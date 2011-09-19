@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Scope:
+  = @translation_key.scope
+%p
+  %b Tkey:
+  = @translation_key.tkey
+
+= link_to 'Edit', edit_translation_key_path(@translation_key)
+\|
+= link_to 'Back', translation_keys_path

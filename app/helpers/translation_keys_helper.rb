@@ -1,0 +1,2 @@
+module TranslationKeysHelper
+end

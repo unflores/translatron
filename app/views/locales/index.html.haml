@@ -1,0 +1,23 @@
+%h1 Listing locales
+
+%table
+  %tr
+    %th Name
+    %th Code
+    %th Master
+    %th
+    %th
+    %th
+
+  - @locales.each do |locale|
+    %tr
+      %td= locale.name
+      %td= locale.code
+      %td= locale.master
+      %td= link_to 'Show', locale
+      %td= link_to 'Edit', edit_locale_path(locale)
+      %td= link_to 'Destroy', locale, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Locale', new_locale_path

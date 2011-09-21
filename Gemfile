@@ -19,6 +19,11 @@ group :assets do
   gem 'awesome_print'
 end
 
+group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+end
+
 gem 'jquery-rails'
 
 # Use unicorn as the web server

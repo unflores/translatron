@@ -5,6 +5,10 @@
       %ul
         - @translation_key.errors.full_messages.each do |msg|
           %li= msg
+  = f.fields_for :translation do |trans|
+    .field
+      = trans.label       :value
+      = trans.text_field  :value
 
   .field
     = f.label :scope

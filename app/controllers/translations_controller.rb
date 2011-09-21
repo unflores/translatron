@@ -11,7 +11,6 @@ class TranslationsController < ApplicationController
 
   def create
     @translation = Translation.new(params[:translation])
-
     if @translation.save
       redirect_to @translation, notice: 'Translation was successfully created.'
     else

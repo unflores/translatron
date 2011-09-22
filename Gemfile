@@ -20,8 +20,11 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'rspec'
   gem 'rspec-rails'
+  # gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 gem 'jquery-rails'
@@ -31,7 +34,4 @@ gem 'jquery-rails'
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 

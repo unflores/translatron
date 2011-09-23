@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110919130407) do
+ActiveRecord::Schema.define(:version => 20110923233106) do
 
   create_table "locales", :force => true do |t|
     t.string   "code"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20110919130407) do
     t.decimal  "translation_key_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "master"
   end
 
 end

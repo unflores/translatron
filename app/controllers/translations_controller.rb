@@ -2,7 +2,7 @@ class TranslationsController < ApplicationController
   before_filter only: ['show', 'edit', 'update', 'destroy']
   
   def index
-    @translations = Locale.master.translations.all
+    @translations = Translation.all
   end
 
   def new

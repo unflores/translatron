@@ -30,6 +30,7 @@ describe "TranslationKeys" do
         end
       end
     end
-    
+   
+    it "should set the maser translation field to true when it creates the master translation" 
   end
 end

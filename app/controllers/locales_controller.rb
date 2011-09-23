@@ -4,7 +4,7 @@ class LocalesController < ApplicationController
   end
 
   def show
-    @locale = Locale.find(params[:id])
+    locale
   end
 
   def new
@@ -12,7 +12,7 @@ class LocalesController < ApplicationController
   end
 
   def edit
-    @locale = Locale.find(params[:id])
+    locale
   end
 
   def create
@@ -26,9 +26,8 @@ class LocalesController < ApplicationController
   end
 
   def update
-    @locale = Locale.find(params[:id])
 
-    if @locale.update_attributes(params[:locale])
+    if locale.update_attributes(params[:locale])
       redirect_to @locale, notice: 'Locale was successfully updated.'
     else
       render action: "edit"
@@ -36,9 +35,23 @@ class LocalesController < ApplicationController
   end
 
   def destroy
-    @locale = Locale.find(params[:id])
-    @locale.destroy
+    locale.destroy
 
     redirect_to locales_url
   end
+  
+  private
+  
+  def locale
+    return @locale if @locale.present?
+    
+     #if not id assume it is the code piece
+    @locale = if params[:id].to_s.match('[0-9]+').present?
+      Locale.find_by_id(params[:id])
+    else
+      Locale.find_by_code(params[:id])
+    end
+    
+  end
+  
 end

@@ -14,7 +14,7 @@ class Locale < ActiveRecord::Base
     
     def populate_translations
       TranslationKey.all.each do |tk|
-        translations.create({ :value => "", :needs_update => true, :locale_id => id })
+        translations.create({ :value => "", :needs_update => true, :locale_id => id, :translation_key => tk })
       end
     end
   

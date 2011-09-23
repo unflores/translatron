@@ -5,6 +5,7 @@ class LocalesController < ApplicationController
 
   def show
     locale
+    @translations = locale.translations
   end
 
   def new

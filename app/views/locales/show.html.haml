@@ -1,11 +1,11 @@
-%p#notice= notice
+%h2 = @locale.name
 
-%p
-  %b Code:
-  = @locale.code
-%p
-  %b Master:
-  = @locale.master
+@translations.each do |trans|
+  .translation
+    .master_def
+      = 
+  
+
 
 = link_to 'Edit', edit_locale_path(@locale)
 \|

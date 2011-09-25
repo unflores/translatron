@@ -31,6 +31,11 @@ describe "TranslationKeys" do
       end
     end
    
-    it "should set the maser translation field to true when it creates the master translation" 
+    it "should set the master translation field to true when it creates the master translation" do
+      old_master_count = Translation.find_all_by_master(true).count
+      post translation_keys_path, valid_attributes
+      
+      Translation.find_all_by_master(true).count.should == old_master_count + 1
+    end
   end
 end

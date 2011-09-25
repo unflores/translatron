@@ -2,7 +2,6 @@ class TranslationKey < ActiveRecord::Base
   validates :scope, :tkey, :presence => true
   
   has_many :translations
-  accepts_nested_attributes_for :translations
   
   after_create :populate_translations
   

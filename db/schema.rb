@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20110923233106) do
     t.decimal  "translation_key_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "master"
+    t.integer  "master_translation_id"
   end
 
 end

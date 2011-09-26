@@ -19,7 +19,6 @@ class TranslationKeysController < ApplicationController
     translation_params                = params[:translation_key].delete(:translation)
     translation_params[:needs_update] = false
     translation_params[:locale_id]    = Locale.master.id
-    translation_params[:master]       = true
         
     @translation_key = TranslationKey.new(params[:translation_key])
     @translation_key.translations.build(translation_params)

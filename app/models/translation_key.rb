@@ -7,8 +7,17 @@ class TranslationKey < ActiveRecord::Base
   
   private
     def populate_translations
+      master = Translation.master id
+      
       Locale.all.each do |loc|
-        translations.create({:value => "", :needs_update => true, :locale_id => loc.id}) unless loc.master
+        unless loc.master
+          translations.create({
+            :value              => "", 
+            :needs_update       => true, 
+            :locale_id          => loc.id, 
+            :master_translation => master
+          }) 
+        end
       end
     end
     

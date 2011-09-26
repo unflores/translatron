@@ -1,21 +1,18 @@
-%h1 Listing translation_keys
+%h1 Translation Keys
 
-%table
-  %tr
-    %th Scope
-    %th Tkey
-    %th
-    %th
-    %th
+- @translations.each do |translation|
+  .translations
+    .absolute_path
+      %span.scope
+        =translation.translation_key.scope + '.'
+      %span.tkey
+        =translation.translation_key.tkey
+    .translation
+      .master_definition
+        = translation.master_translation.value
+      .definition
+        .value= translation.value
+     
 
-  - @translation_keys.each do |translation_key|
-    %tr
-      %td= translation_key.scope
-      %td= translation_key.tkey
-      %td= link_to 'Show', translation_key
-      %td= link_to 'Edit', edit_translation_key_path(translation_key)
-      %td= link_to 'Destroy', translation_key, :confirm => 'Are you sure?', :method => :delete
-
-%br
 
 = link_to 'New Translation key', new_translation_key_path

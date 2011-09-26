@@ -6,8 +6,10 @@ class Translation < ActiveRecord::Base
 
   after_create :set_master_translation  
 
+  scope :master_translations, where('id = master_translation_id')
+
   def self.master id
-    Translation.where( "translation_key_id = ? and id = master_translation_id", id ).last
+    Translation.master_translations.where( "translation_key_id = ?", id ).last
   end
 
   def set_master_translation

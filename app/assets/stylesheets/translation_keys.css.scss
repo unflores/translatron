@@ -1,3 +1,35 @@
 // Place all the styles related to the translation_keys controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.translations{
+	width: 800px;
+	background: #EEE;
+	border: 2px solid #AAA;
+	margin: 5px;
+	
+	.absolute_path{
+		text-align: center;
+	}
+
+	.master_definition{
+		display:inline-block;
+		width: 300px;
+		border: solid 2px #BBB;
+		background: #fff;
+		min-height: 20px;
+	}
+	.translation{
+		margin: 5px auto;
+		text-align: center;
+
+		.definition{
+			border: solid 2px #BBB;
+			min-height: 20px;
+			width: 300px;
+			display: inline-block;
+		}
+	}
+
+}
+

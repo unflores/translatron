@@ -1,6 +1,6 @@
 class TranslationKeysController < ApplicationController
   def index
-    @translation_keys = TranslationKey.all
+    @translations = Translation.master_translations
   end
 
   def show

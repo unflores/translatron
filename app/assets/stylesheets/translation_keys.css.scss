@@ -3,31 +3,46 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .translations{
-	width: 800px;
+	width: 1024px;
 	background: #EEE;
 	border: 2px solid #AAA;
 	margin: 5px;
 	
+	.save{
+		float: right;
+		margin: 4px 30px 10px 10px;
+		padding: 5px 10px;
+		border: black solid 3px;
+	}
+
 	.absolute_path{
 		text-align: center;
 	}
 
-	.master_definition{
-		display:inline-block;
-		width: 300px;
-		border: solid 2px #BBB;
-		background: #fff;
-		min-height: 20px;
-	}
 	.translation{
-		margin: 5px auto;
-		text-align: center;
+		margin: 10px;
+		text-align: left;
+
+		.master_definition{
+			display:inline-block;
+			width: 300px;
+			border: solid 2px #BBB;
+			background: #fff;
+			min-height: 20px;
+			margin: 0;
+			padding: 0;
+			vertical-align: top;
+			min-height: 30px;
+		}
 
 		.definition{
 			border: solid 2px #BBB;
 			min-height: 20px;
-			width: 300px;
+			width: 500px;
 			display: inline-block;
+			background: #fff;
+			margin: 0;
+			padding: 0;
 		}
 	}
 

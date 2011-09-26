@@ -3,16 +3,13 @@
 - @translations.each do |translation|
   .translations
     .absolute_path
-      %span.scope
-        =translation.translation_key.scope + '.'
-      %span.tkey
-        =translation.translation_key.tkey
+      != "<span class='scope'>#{translation.translation_key.scope}</span>.<span class='tkey'>#{translation.translation_key.tkey}</span>"
+    .save
+      Save     
     .translation
       .master_definition
         = translation.master_translation.value
-      .definition
-        .value= translation.value
-     
+      %textarea.definition= translation.value
 
 
 = link_to 'New Translation key', new_translation_key_path

@@ -2,13 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.translations{
+.translation_pair{
 	width: 1024px;
 	background: #EEE;
 	border: 2px solid #AAA;
 	margin: 5px;
 	
 	.save{
+	  display: none;
 		float: right;
 		margin: 4px 30px 10px 10px;
 		padding: 5px 10px;

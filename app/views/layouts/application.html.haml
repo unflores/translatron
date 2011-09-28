@@ -10,6 +10,17 @@
     = javascript_include_tag 'application'
     = csrf_meta_tag
   %body
+    #header
+      %h1
+        Transmogrifier
+        %a{ :style => 'font-size: 10px', :href => 'http://members.shaw.ca/newsong/calvin.html' } what's a transmogrifier?
+    %ul#nav
+      %li= link_to "New Key", new_translation_key_path
+      %li= link_to "Projects", ""
+      %li.last= link_to "Profile", ""
+      %li.heading Locales:
+      - all_locales.each do |loc|
+        %li= link_to loc.code, locale_path(loc.id)
     %p.notice= notice
     %p.alert= alert
     .content

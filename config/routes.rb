@@ -6,7 +6,7 @@ Translator::Application.routes.draw do
 
   resources :translations
 
-  root :to => "translations#index"
+  root :to => "translation_keys#index"
   
   
   

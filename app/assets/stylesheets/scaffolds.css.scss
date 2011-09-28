@@ -1,9 +1,22 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
-  line-height: 18px; }
+  line-height: 18px; 
+  margin: 0;
+  padding: 0;
+}
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -19,9 +32,7 @@ a {
   color: #000;
   &:visited {
     color: #666; }
-  &:hover {
-    color: #fff;
-    background-color: #000; } }
+ }
 
 div {
   &.field, &.actions {
@@ -54,3 +65,50 @@ div {
   ul li {
     font-size: 12px;
     list-style: square; } }
+
+
+#header{
+  min-height: 70px;
+  background: #DDD;
+  border-bottom: 3px solid #555;
+  
+  h1{
+    line-height: 40px;
+    font-size: 50px;
+    padding: 15px;
+  }
+}
+
+ul#nav{
+  margin: 0;
+  background: #333;
+  border-bottom: 3px #777 solid;
+  li{
+    display: inline-block;
+    border-right: solid 2px #777;
+    padding-right: 5px;
+    a{
+      color: #aaa;
+      display: inline-block;
+      text-decoration: none;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  li.last{
+    border-right: none;
+  }
+  li.heading{
+    margin-left: 5px;
+    color: #fff;
+
+  }
+}
+
+
+.content{
+  width: 90%;
+  margin: 0 auto;
+  min-width: 1024px;
+}

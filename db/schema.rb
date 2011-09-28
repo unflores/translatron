@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(:version => 20110923233106) do
   create_table "translations", :force => true do |t|
     t.string   "value"
     t.boolean  "needs_update"
-    t.decimal  "locale_id"
-    t.decimal  "translation_key_id"
+    t.integer  "locale_id"
+    t.integer  "translation_key_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "master_translation_id"

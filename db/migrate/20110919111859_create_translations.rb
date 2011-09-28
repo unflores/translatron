@@ -3,8 +3,8 @@ class CreateTranslations < ActiveRecord::Migration
     create_table :translations do |t|
       t.string      :value
       t.boolean     :needs_update
-      t.decimal     :locale_id
-      t.decimal     :translation_key_id
+      t.integer     :locale_id
+      t.integer     :translation_key_id
       t.timestamps
     end
   end
